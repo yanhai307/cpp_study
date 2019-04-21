@@ -11,4 +11,9 @@ add_executable(dm05_variableCheck dm05_variableCheck.cpp)
 add_executable(dm06_struct dm06_struct.cpp)
 add_executable(dm07_typeCheck dm07_typeCheck.cpp)
 add_executable(dm08_addBoolTypeKeyword dm08_addBoolTypeKeyword.cpp)
+add_executable(dm09_ternaryOperator dm09_ternaryOperator.cpp)
+add_executable(dm10_constBase dm10_constBase.cpp)
+add_executable(dm11_constInCpp dm11_constInCpp.cpp)
+add_executable(dm12_constAndDefine dm12_constAndDefine.cpp)
+
 
