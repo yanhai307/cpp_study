@@ -15,5 +15,9 @@ add_executable(dm09_ternaryOperator dm09_ternaryOperator.cpp)
 add_executable(dm10_constBase dm10_constBase.cpp)
 add_executable(dm11_constInCpp dm11_constInCpp.cpp)
 add_executable(dm12_constAndDefine dm12_constAndDefine.cpp)
+add_executable(dm13_referenceBase dm13_referenceBase.cpp)
+add_executable(dm14_referenceFunctionParam dm14_referenceFunctionParam.cpp)
+add_executable(dm15_referenceCompositeType dm15_referenceCompositeType.cpp)
+add_executable(dm16_referenceEssence dm16_referenceEssence.cpp)
 
 
