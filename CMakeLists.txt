@@ -19,5 +19,8 @@ add_executable(dm13_referenceBase dm13_referenceBase.cpp)
 add_executable(dm14_referenceFunctionParam dm14_referenceFunctionParam.cpp)
 add_executable(dm15_referenceCompositeType dm15_referenceCompositeType.cpp)
 add_executable(dm16_referenceEssence dm16_referenceEssence.cpp)
+add_executable(dm17_referenceFunReturn dm17_referenceFunReturn.cpp)
+add_executable(dm18_referencePoint dm18_referencePoint.cpp)
+add_executable(dm19_referenceConst dm19_referenceConst.cpp)
 
 
