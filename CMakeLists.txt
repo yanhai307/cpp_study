@@ -22,5 +22,10 @@ add_executable(dm16_referenceEssence dm16_referenceEssence.cpp)
 add_executable(dm17_referenceFunReturn dm17_referenceFunReturn.cpp)
 add_executable(dm18_referencePoint dm18_referencePoint.cpp)
 add_executable(dm19_referenceConst dm19_referenceConst.cpp)
+add_executable(dm20_inlineFunction dm20_inlineFunction.cpp)
+add_executable(dm21_funcDefaultParam dm21_funcDefaultParam.cpp)
+add_executable(dm22_funcPlaceParam dm22_funcPlaceParam.cpp)
+add_executable(dm23_funcOverload dm23_funcOverload.cpp)
+add_executable(dm24_funcOverloadAndFuncPoint dm24_funcOverloadAndFuncPoint.cpp)
 
 
