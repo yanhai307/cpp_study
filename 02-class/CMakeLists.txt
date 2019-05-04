@@ -1,0 +1,3 @@
+
+add_executable(dm01_classEncapsulation dm01_classEncapsulation.cpp)
+add_executable(dm02_classSeparateCompilation dm02_classSeparateCompilation/main.cpp dm02_classSeparateCompilation/teacher.cpp)

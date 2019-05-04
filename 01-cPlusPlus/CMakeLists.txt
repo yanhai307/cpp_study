@@ -1,0 +1,28 @@
+
+
+add_executable(dm01_helloworld dm01_helloworld.cpp)
+add_executable(dm02_namespace dm02_namespace.cpp)
+add_executable(dm03_variableDefinitions dm03_variableDefinitions.cpp)
+add_executable(dm04_registerKeyword dm04_registerKeyword.cpp)
+add_executable(dm05_variableCheck dm05_variableCheck.cpp)
+add_executable(dm06_struct dm06_struct.cpp)
+add_executable(dm07_typeCheck dm07_typeCheck.cpp)
+add_executable(dm08_addBoolTypeKeyword dm08_addBoolTypeKeyword.cpp)
+add_executable(dm09_ternaryOperator dm09_ternaryOperator.cpp)
+add_executable(dm10_constBase dm10_constBase.cpp)
+add_executable(dm11_constInCpp dm11_constInCpp.cpp)
+add_executable(dm12_constAndDefine dm12_constAndDefine.cpp)
+add_executable(dm13_referenceBase dm13_referenceBase.cpp)
+add_executable(dm14_referenceFunctionParam dm14_referenceFunctionParam.cpp)
+add_executable(dm15_referenceCompositeType dm15_referenceCompositeType.cpp)
+add_executable(dm16_referenceEssence dm16_referenceEssence.cpp)
+add_executable(dm17_referenceFunReturn dm17_referenceFunReturn.cpp)
+add_executable(dm18_referencePoint dm18_referencePoint.cpp)
+add_executable(dm19_referenceConst dm19_referenceConst.cpp)
+add_executable(dm20_inlineFunction dm20_inlineFunction.cpp)
+add_executable(dm21_funcDefaultParam dm21_funcDefaultParam.cpp)
+add_executable(dm22_funcPlaceParam dm22_funcPlaceParam.cpp)
+add_executable(dm23_funcOverload dm23_funcOverload.cpp)
+add_executable(dm24_funcOverloadAndFuncPoint dm24_funcOverloadAndFuncPoint.cpp)
+
+
