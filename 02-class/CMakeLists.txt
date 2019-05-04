@@ -1,3 +1,5 @@
 
 add_executable(dm01_classEncapsulation dm01_classEncapsulation.cpp)
 add_executable(dm02_classSeparateCompilation dm02_classSeparateCompilation/main.cpp dm02_classSeparateCompilation/teacher.cpp)
+add_executable(dm03_objectOriented1 dm03_objectOriented1/main.cpp dm03_objectOriented1/cube.cpp)
+add_executable(dm04_objectOriented2 dm04_objectOriented2/main.cpp dm04_objectOriented2/circle.cpp dm04_objectOriented2/point.cpp)
