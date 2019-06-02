@@ -20,6 +20,18 @@ C++对C语言的加强
 
 类
 
+- dm01_classEncapsulation 类的基本概念及类的封装
+- dm02_classSeparateCompilation 类的分离编译
+- dm03_objectOriented1 面向对象编程1
+- dm04_objectOriented2 面向对象编程2
+- dm05_classConstructor1 类的构造函数与析构函数基础
+- dm05_classConstructor2 构造函数的分类
+- dm05_classConstructor3 默认构造函数和默认拷贝构造函数
+- dm05_classConstructorCopy12 拷贝构造函数应用场景，用一个对象初始化另外一个对象
+- dm05_classConstructorCopy3 拷贝构造函数的第3种应用场景，对象作为函数参数
+- dm05_classConstructorCopy4 拷贝构造函数的第4种应用场景，对象作为函数返回值
+- dm05_classConstructorSummarizing 构造函数的调用规则
+- dm06_deepCopy 类的深浅拷贝
 - dm07_constructorInitializerList 构造函数的初始化列表
 - dm08_constructorSummary1 强化训练1: 构造函数-析构函数调用顺序 匿名对象的声明周期
 - dm09_constructorSummary2 强化训练2: 构造函数中调用构造函数 （产生匿名对象）
@@ -29,3 +41,5 @@ C++对C语言的加强
 - dm13_objectOrientedModel1 面向对象模型初探
 - dm14_objectOrientedModel2 面向对象模型剖析
 - dm15_this_point 学习this指针
+- dm16_friend_function 友元函数
+- dm17_friend_class 友元类
