@@ -50,4 +50,6 @@ C++对C语言的加强
 - dm22_operator_overloading_5 友元函数定义运算符重载<<
 - dm23_operator_overloading_6 运算符重载=
 - dm24_operator_overloading_7 运算符重载[] == !=
-
+- dm25_operator_overloading_8 运算符重载()
+- dm26_operator_overloading_9 运算符重载&& ||
+- dm27_mystring 实现一个MyString类
