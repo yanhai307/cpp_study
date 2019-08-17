@@ -23,7 +23,7 @@ class A {
     friend class B;
 
 public:
-    A(int a=10, int b=20)
+    A(int a = 10, int b = 20)
     {
         this->a = a;
         this->b = b;
@@ -53,10 +53,12 @@ public:
     {
         Aobject.a = a;
     }
+
     void print()
     {
         Aobject.print();
     }
+
 private:
     A Aobject;
 };

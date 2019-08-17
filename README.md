@@ -43,3 +43,11 @@ C++对C语言的加强
 - dm15_this_point 学习this指针
 - dm16_friend_function 友元函数
 - dm17_friend_class 友元类
+- dm18_operator_overloading_1 运算符重载入门技术推演
+- dm19_operator_overloading_2 运算符重载的两种方法
+- dm20_operator_overloading_3 一元运算符重载++ --
+- dm21_operator_overloading_4 运算符重载整理
+- dm22_operator_overloading_5 友元函数定义运算符重载<<
+- dm23_operator_overloading_6 运算符重载=
+- dm24_operator_overloading_7 运算符重载[] == !=
+
