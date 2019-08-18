@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(01-cPlusPlus)
 add_subdirectory(02-class)
+add_subdirectory(03-inheritance)

@@ -18,7 +18,7 @@ C++对C语言的加强
 
 ## 02-class
 
-类
+类基础
 
 - dm01_classEncapsulation 类的基本概念及类的封装
 - dm02_classSeparateCompilation 类的分离编译
@@ -53,3 +53,10 @@ C++对C语言的加强
 - dm25_operator_overloading_8 运算符重载()
 - dm26_operator_overloading_9 运算符重载&& ||
 - dm27_mystring 实现一个MyString类
+
+# 03-inheritance
+
+类的继承
+
+- dm01_definition 类继承的定义
+- dm02_access 类继承中的访问控制
