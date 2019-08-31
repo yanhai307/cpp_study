@@ -60,3 +60,7 @@ C++对C语言的加强
 
 - dm01_definition 类继承的定义
 - dm02_access 类继承中的访问控制
+- dm03_principle_of_compatibility 类继承中的兼容性原则
+
+
+
