@@ -19,6 +19,7 @@ public:
     Parent(int a = 0)
     {
         this->a = a;
+        print();
     }
 
     virtual void print()
@@ -35,6 +36,7 @@ public:
     Child(int a = 1, int b = 2) : Parent(a)
     {
         this->b = b;
+        print();
     }
 
     virtual void print()

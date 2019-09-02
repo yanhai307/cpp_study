@@ -4,9 +4,10 @@
             想通过父类指针 释放所有的子类资源
 */
 
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
+#include <cstring>
 
 using std::cout;
 using std::endl;
@@ -81,7 +82,7 @@ void test1()
 //  想通过父类指针 释放所有的子类资源
 void howtodelete(A *base)
 {
-    delete base;    // 不会表现为多态
+    delete base;    // 不写 virtual关键字的时候, 不会表现为多态
 }
 
 void test2()

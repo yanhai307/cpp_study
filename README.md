@@ -54,13 +54,31 @@ C++对C语言的加强
 - dm26_operator_overloading_9 运算符重载&& ||
 - dm27_mystring 实现一个MyString类
 
-# 03-inheritance
+## 03-inheritance
 
 类的继承
 
 - dm01_definition 类继承的定义
 - dm02_access 类继承中的访问控制
 - dm03_principle_of_compatibility 类继承中的兼容性原则
+- dm04_继承中的构造与析构
+- dm05_继承与组合下的构造与析构
+- dm06_继承中的同名成员变量和函数
+- dm07_继承中的static关键字
+- dm08_多继承
+- dm09_多继承的二义性和虚继承的解决方案
+- dm10_多继承原理抛转
+- dm11_类型兼容性原则遇上函数重写
+- dm12_多态案例
+- dm13_虚析构函数
+- dm14_重载重写重定义
+- dm15_多态原理探究
+- dm16_证明vptr指针的存在
+- dm17_vptr指针的分步初始化
 
+## 深度探索
 
+### 多继承中的内存模型
+
+![多继承中的内存模型](doc/多继承内存模型.png)
 
