@@ -15,4 +15,7 @@ add_executable(dm14_ dm14_重载重写重定义.cpp)
 add_executable(dm15_ dm15_多态原理探究.cpp)
 add_executable(dm16_ dm16_证明vptr指针的存在.cpp)
 add_executable(dm17_ dm17_vptr指针的分步初始化.cpp)
-
+add_executable(dm18_ dm18_父类指针和子类指针的步长.cpp)
+add_executable(dm19_ dm19_纯虚函数抽象类语法基础.cpp)
+add_executable(dm20_ dm20_抽象类在多继承中的应用.cpp)
+add_executable(dm21_ dm21_面向抽象类编程_实战.cpp)
