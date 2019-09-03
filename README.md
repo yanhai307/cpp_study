@@ -33,7 +33,7 @@ C++对C语言的加强
 - dm05_classConstructorSummarizing 构造函数的调用规则
 - dm06_deepCopy 类的深浅拷贝
 - dm07_constructorInitializerList 构造函数的初始化列表
-- dm08_constructorSummary1 强化训练1: 构造函数-析构函数调用顺序 匿名对象的声明周期
+- dm08_constructorSummary1 强化训练1: 构造函数-析构函数调用顺序 匿名对象的生命周期
 - dm09_constructorSummary2 强化训练2: 构造函数中调用构造函数 （产生匿名对象）
 - dm10_new_delete1 C++中的 new delete基础知识
 - dm11_new_delete2 深入分析new和delete

@@ -47,13 +47,13 @@ void test2_B1()
     B1 b1;
     printf("sizeof(b1): %ld\n", sizeof(b1));
     printf("b1   : %p\n", &b1);
-    printf("b1.b : %p, offset: %ld\n", &b1.b, (long)&b1.b - (long)&b1);
-    printf("b1.b1: %p, offset: %ld\n", &b1.b1, (long)&b1.b1 - (long)&b1);
+    printf("b1.b : %p, offset: %ld\n", &b1.b, (long) &b1.b - (long) &b1);
+    printf("b1.b1: %p, offset: %ld\n", &b1.b1, (long) &b1.b1 - (long) &b1);
 
     B &b = b1;
     printf("sizeof(b): %ld\n", sizeof(b));
-    printf("b    : %p, offset: %ld\n", &b, (long)&b - (long)&b1);
-    printf("b.b  : %p, offset: %ld\n", &b.b, (long)&b.b - (long)&b);
+    printf("b    : %p, offset: %ld\n", &b, (long) &b - (long) &b1);
+    printf("b.b  : %p, offset: %ld\n", &b.b, (long) &b.b - (long) &b);
 }
 
 void test2_B2()
@@ -62,13 +62,13 @@ void test2_B2()
     B2 b2;
     printf("sizeof(b2): %ld\n", sizeof(b2));
     printf("b2   : %p\n", &b2);
-    printf("b2.b : %p, offset: %ld\n", &b2.b, (long)&b2.b - (long)&b2);
-    printf("b2.b2: %p, offset: %ld\n", &b2.b2, (long)&b2.b2 - (long)&b2);
+    printf("b2.b : %p, offset: %ld\n", &b2.b, (long) &b2.b - (long) &b2);
+    printf("b2.b2: %p, offset: %ld\n", &b2.b2, (long) &b2.b2 - (long) &b2);
 
     B &b = b2;
     printf("sizeof(b): %ld\n", sizeof(b));
-    printf("b    : %p, offset: %ld\n", &b, (long)&b - (long)&b2);
-    printf("b.b  : %p, offset: %ld\n", &b.b, (long)&b.b - (long)&b);
+    printf("b    : %p, offset: %ld\n", &b, (long) &b - (long) &b2);
+    printf("b.b  : %p, offset: %ld\n", &b.b, (long) &b.b - (long) &b);
 }
 
 void test2_C()
@@ -77,23 +77,23 @@ void test2_C()
     C c;
     printf("sizeof(c): %ld\n", sizeof(c));
     printf("c       : %p\n", &c);
-    printf("c.B1::b : %p, offset: %ld\n", &c.B1::b, (long)&c.B1::b - (long)&c);
-    printf("c.B2::b : %p, offset: %ld\n", &c.B2::b, (long)&c.B2::b - (long)&c);
-    printf("c.b1    : %p, offset: %ld\n", &c.b1, (long)&c.b1 - (long)&c);
-    printf("c.b2    : %p, offset: %ld\n", &c.b2, (long)&c.b2 - (long)&c);
-    printf("c.c     : %p, offset: %ld\n", &c.c, (long)&c.c - (long)&c);
+    printf("c.B1::b : %p, offset: %ld\n", &c.B1::b, (long) &c.B1::b - (long) &c);
+    printf("c.B2::b : %p, offset: %ld\n", &c.B2::b, (long) &c.B2::b - (long) &c);
+    printf("c.b1    : %p, offset: %ld\n", &c.b1, (long) &c.b1 - (long) &c);
+    printf("c.b2    : %p, offset: %ld\n", &c.b2, (long) &c.b2 - (long) &c);
+    printf("c.c     : %p, offset: %ld\n", &c.c, (long) &c.c - (long) &c);
 
     B1 &b1 = c;
     printf("sizeof(b1): %ld\n", sizeof(b1));
-    printf("b1   : %p, offset: %ld\n", &b1, (long)&b1 - (long)&c);
-    printf("b1.b : %p, offset: %ld\n", &b1.b, (long)&b1.b - (long)&b1);
-    printf("b1.b1: %p, offset: %ld\n", &b1.b1, (long)&b1.b1 - (long)&b1);
+    printf("b1   : %p, offset: %ld\n", &b1, (long) &b1 - (long) &c);
+    printf("b1.b : %p, offset: %ld\n", &b1.b, (long) &b1.b - (long) &b1);
+    printf("b1.b1: %p, offset: %ld\n", &b1.b1, (long) &b1.b1 - (long) &b1);
 
     B2 &b2 = c;
     printf("sizeof(b2): %ld\n", sizeof(b2));
-    printf("b2   : %p, offset: %ld\n", &b2, (long)&b2 - (long)&c);
-    printf("b2.b : %p, offset: %ld\n", &b2.b, (long)&b2.b - (long)&b2);
-    printf("b2.b2: %p, offset: %ld\n", &b2.b2, (long)&b2.b2 - (long)&b2);
+    printf("b2   : %p, offset: %ld\n", &b2, (long) &b2 - (long) &c);
+    printf("b2.b : %p, offset: %ld\n", &b2.b, (long) &b2.b - (long) &b2);
+    printf("b2.b2: %p, offset: %ld\n", &b2.b2, (long) &b2.b2 - (long) &b2);
 
     // 报错，c中有2个B，这样写不知道是使用从B1继承来的B还是从B2继承来的B
     /*

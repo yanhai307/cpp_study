@@ -13,7 +13,6 @@ using std::endl;
 // 解耦合... 模块的划分
 
 
-
 class Figure    // 抽象类
 {
 public:
@@ -22,8 +21,7 @@ public:
 };
 
 // 圆
-class Circle : public Figure
-{
+class Circle : public Figure {
 public:
     Circle(int r)
     {
@@ -34,13 +32,13 @@ public:
     {
         cout << "圆的面积为: " << 3.14 * r * r << endl;
     }
+
 private:
     int r;
 };
 
 // 三角形
-class Tri : public Figure
-{
+class Tri : public Figure {
 public:
     Tri(int a, int h)
     {
@@ -52,6 +50,7 @@ public:
     {
         cout << "三角形的面积为: " << a * h / 2 << endl;
     }
+
 private:
     int a;
     int h;
@@ -59,8 +58,7 @@ private:
 
 
 // 矩形
-class Square : public Figure
-{
+class Square : public Figure {
 public:
     Square(int a, int h)
     {
@@ -72,12 +70,13 @@ public:
     {
         cout << "矩形的面积为: " << a * h << endl;
     }
+
 private:
     int a;
     int h;
 };
 
-void objplay(Figure* base)
+void objplay(Figure *base)
 {
     base->getArea();    // 会发生多态
 }
@@ -85,7 +84,7 @@ void objplay(Figure* base)
 int main()
 {
     //Figure f;   // 抽象类不能被实例化
-    Figure* base = nullptr;
+    Figure *base = nullptr;
 
     Circle c1(10);
     Tri t1(20, 30);

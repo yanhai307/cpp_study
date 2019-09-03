@@ -10,37 +10,37 @@
 using std::cout;
 using std::endl;
 
-class Interface1
-{
+class Interface1 {
 public:
     virtual int add(int a, int b) = 0;
+
     virtual void print() = 0;
 };
 
-class Interface2
-{
+class Interface2 {
 public:
     virtual int mult(int a, int b) = 0;
+
     virtual void print() = 0;
 };
 
-class Parent
-{
+class Parent {
 public:
     Parent()
     {
         this->a = 0;
     }
+
     int getA()
     {
         return a;
     }
+
 private:
     int a;
 };
 
-class Child : public Parent, public Interface1, public Interface2
-{
+class Child : public Parent, public Interface1, public Interface2 {
 public:
     virtual int add(int a, int b)
     {
@@ -65,10 +65,10 @@ int main()
     Child c1;
     c1.print();
 
-    Interface1* it1 = &c1;
+    Interface1 *it1 = &c1;
     it1->add(1, 2);
 
-    Interface2* it2 = &c1;
+    Interface2 *it2 = &c1;
     it2->mult(3, 6);
 
     return 0;

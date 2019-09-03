@@ -12,8 +12,7 @@
 using std::cout;
 using std::endl;
 
-class Parent
-{
+class Parent {
 public:
     Parent(int a = 0)
     {
@@ -24,26 +23,27 @@ public:
     {
         cout << "Parent print()" << endl;
     }
+
 private:
     int a;
 };
 
-class Child : public Parent
-{
+class Child : public Parent {
 public:
     Child(int a = 0, int b = 0) : Parent(a)
     {
-      //  this->b = b;
+        //  this->b = b;
     }
+
 private:
     int b;
 };
 
 int main()
 {
-    Parent* pP = nullptr;
-    Child* pC = nullptr;
-    Child array[] = { Child(1), Child(2), Child(3) };
+    Parent *pP = nullptr;
+    Child *pC = nullptr;
+    Child array[] = {Child(1), Child(2), Child(3)};
 
     // 0
     pP = array;

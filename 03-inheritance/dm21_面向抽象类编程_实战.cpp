@@ -11,17 +11,15 @@
 using std::cout;
 using std::endl;
 
-class Programmer
-{
+class Programmer {
 public:
     virtual void getSal() = 0;
 };
 
 // 初级
-class JuniorProgrammer : public Programmer
-{
+class JuniorProgrammer : public Programmer {
 public:
-    JuniorProgrammer(const char* name, const char* job, int sal)
+    JuniorProgrammer(const char *name, const char *job, int sal)
     {
         this->name = name;
         this->job = job;
@@ -34,16 +32,15 @@ public:
     }
 
 private:
-    const char* name;
-    const char* job;
+    const char *name;
+    const char *job;
     int sal;
 };
 
 // 中级
-class MidProgrammer : public Programmer
-{
+class MidProgrammer : public Programmer {
 public:
-    MidProgrammer(const char* name, const char* job, int sal)
+    MidProgrammer(const char *name, const char *job, int sal)
     {
         this->name = name;
         this->job = job;
@@ -56,16 +53,15 @@ public:
     }
 
 private:
-    const char* name;
-    const char* job;
+    const char *name;
+    const char *job;
     int sal;
 };
 
 // 高级
-class AdvProgrammer : public Programmer
-{
+class AdvProgrammer : public Programmer {
 public:
-    AdvProgrammer(const char* name, const char* job, int sal)
+    AdvProgrammer(const char *name, const char *job, int sal)
     {
         this->name = name;
         this->job = job;
@@ -78,16 +74,15 @@ public:
     }
 
 private:
-    const char* name;
-    const char* job;
+    const char *name;
+    const char *job;
     int sal;
 };
 
 // 架构师
-class Architect : public Programmer
-{
+class Architect : public Programmer {
 public:
-    Architect(const char* name, const char* job, int sal)
+    Architect(const char *name, const char *job, int sal)
     {
         this->name = name;
         this->job = job;
@@ -100,12 +95,12 @@ public:
     }
 
 private:
-    const char* name;
-    const char* job;
+    const char *name;
+    const char *job;
     int sal;
 };
 
-void getSal(Programmer* base)
+void getSal(Programmer *base)
 {
     base->getSal();
 }
@@ -124,6 +119,6 @@ int main()
     Architect ar("小赵", "架构师", 24000);
     getSal(&ar);
 
-    
+
     return 0;
 }
