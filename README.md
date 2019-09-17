@@ -76,6 +76,24 @@ C++对C语言的加强
 - dm16_证明vptr指针的存在
 - dm17_vptr指针的分步初始化
 
+## 07-spdlog
+
+日志库
+<https://github.com/gabime/spdlog>
+
+### build
+```bash
+wget https://github.com/gabime/spdlog/archive/v1.3.1.tar.gz -O spdlog-1.3.1.tar.gz
+tar -xf spdlog-1.3.1.tar.gz  
+cp -r -p spdlog-1.3.1/include/spdlog /usr/local/include/
+```
+
+
+## 08-cmdline
+
+命令行解析库
+<https://github.com/tanakh/cmdline>
+
 ## 深度探索
 
 ### 多继承中的内存模型

@@ -1,7 +1,6 @@
 //
-// Created by yanhai on 2019/8/17.
+// Created by YANHAI on 2019/8/17.
 //
-
 
 #include <iostream>
 
@@ -54,7 +53,6 @@ public:
         return tmp;
     }
 
-
     // 成员函数法，实现前置--运算符重载
     Complex &operator--()
     {
@@ -72,16 +70,12 @@ public:
     }
 };
 
-
 /**
  * 定义运算符重载函数名的步骤
  * 1.要承认操作符重载是一个函数，写出函数名称
  * 2、根据操作数，写出函数参数
  * 3.  根据业务，完善函数返回值（看函数是返回引用还是指针还是元素），及实现函数业务
  */
-
-
-
 int main()
 {
     Complex c1(1, 2);

@@ -1,7 +1,6 @@
 //
-// Created by yanhai on 2019/8/17.
+// Created by YANHAI on 2019/8/17.
 //
-
 
 #include <iostream>
 
@@ -55,7 +54,6 @@ public:
         return tmp;
     }
 };
-
 
 /**
  * 定义运算符重载函数名的步骤

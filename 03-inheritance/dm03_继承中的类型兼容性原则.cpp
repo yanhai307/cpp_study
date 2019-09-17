@@ -1,9 +1,11 @@
 //
-// Created by yanhai on 19-8-24.
+// Created by YANHAI on 2019/8/24.
 //
 
 /**
- *
+ * 继承中的类型兼容性原则
+ *  1. 可以使用父类指针（引用）指向子类对象
+ *  2. 可以使用子类对象初始化父类对象
  */
 
 #include <iostream>
@@ -49,7 +51,6 @@ private:
     int c;
 };
 
-
 void howToPrint(Parent *p)
 {
     p->printP();
@@ -89,7 +90,6 @@ void test2()
     Child c1;
     Parent p1 = c1;
 }
-
 
 int main()
 {

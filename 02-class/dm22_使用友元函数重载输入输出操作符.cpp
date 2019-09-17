@@ -1,5 +1,5 @@
 //
-// Created by yanhai on 2019/8/17.
+// Created by YANHAI on 2019/8/17.
 //
 
 /**
@@ -64,7 +64,6 @@ public:
         return tmp;
     }
 
-
     // 成员函数法，实现前置--运算符重载
     Complex &operator--()
     {
@@ -81,7 +80,6 @@ public:
         return tmp;
     }
 };
-
 
 /**
  * 定义运算符重载函数名的步骤

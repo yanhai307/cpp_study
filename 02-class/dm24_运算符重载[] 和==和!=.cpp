@@ -1,5 +1,5 @@
 //
-// Created by yanhai on 2019/8/17.
+// Created by YANHAI on 2019/8/17.
 //
 
 #include <iostream>
@@ -70,7 +70,6 @@ public:
         return !(*this == obj);
     }
 
-
 private:
     int m_length;
     int *m_space;
@@ -84,7 +83,6 @@ ostream &operator<<(ostream &out, Array &a)
     out << endl;
     return out;
 }
-
 
 istream &operator>>(istream &in, Array &a)
 {
