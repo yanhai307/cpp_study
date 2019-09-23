@@ -1,10 +1,12 @@
+//
+// Created by YANHAI on 2019/9/2.
+//
 
-/* 
+/**
     编写一个C++程序，计算程序员(Programmer)工资
       1. 要求能计算初级程序员（JuniorProgrammer）中级程序员（MidProgrammer）高级程序员（AdvProgrammer）的工资
       2. 要求利用抽象类同一界面，方便程序的扩展，比如：新增 计算 架构师（Architect）的工资
 */
-
 
 #include <iostream>
 
