@@ -7,6 +7,7 @@
  */
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -55,7 +56,8 @@ int main()
     {
         char my_array[] = "abfsfa232afafsasfsb";
 
-        constexpr int len = sizeof(my_array) / sizeof(my_array[0]);
+//        constexpr int len = sizeof(my_array) / sizeof(my_array[0]) - 1;
+        int len = strlen(my_array);
 
         myPrint<char, int>(my_array, len);
         mySort<char, int>(my_array, len);

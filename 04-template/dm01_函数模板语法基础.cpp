@@ -19,8 +19,7 @@ using namespace std;
 // int类型的
 void myswap_int(int &a, int &b)
 {
-    int c;
-    c = a;
+    int c = a;
     a = b;
     b = c;
 }
@@ -28,8 +27,7 @@ void myswap_int(int &a, int &b)
 // char类型的
 void myswap_char(char &a, char &b)
 {
-    char c;
-    c = a;
+    char c = a;
     a = b;
     b = c;
 }
@@ -62,8 +60,7 @@ void test1()
 template<typename T>
 void myswap(T &a, T &b)
 {
-    T c;
-    c = a;
+    T c = a;
     a = b;
     b = c;
 }

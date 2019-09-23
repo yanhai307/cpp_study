@@ -1,3 +1,8 @@
 add_executable(04_template_dm01_ dm01_函数模板语法基础.cpp)
 add_executable(04_template_dm02_ dm02_函数模板做函数参数强化.cpp)
+add_executable(04_template_dm03_ dm03_函数模板遇上函数重载.cpp)
+add_executable(04_template_dm04_ dm04_函数模板和普通函数在一起的调用规则.cpp)
+add_executable(04_template_dm05_ dm05_编译器实现模板机制剖析.cpp)
+add_executable(04_template_dm06_ dm06_类模板基础及单个类模板语法.cpp)
+add_executable(04_template_dm07_ dm07_继承中的类模板语法.cpp)
 
