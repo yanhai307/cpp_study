@@ -5,4 +5,7 @@ add_executable(04_template_dm04_ dm04_函数模板和普通函数在一起的调
 add_executable(04_template_dm05_ dm05_编译器实现模板机制剖析.cpp)
 add_executable(04_template_dm06_ dm06_类模板基础及单个类模板语法.cpp)
 add_executable(04_template_dm07_ dm07_继承中的类模板语法.cpp)
+add_executable(04_template_dm08_ dm08_复数类_成员函数在类内部.cpp)
+add_executable(04_template_dm09_ dm09_复数类_成员函数在同一个文件的类的外部.cpp)
+add_executable(04_template_dm10_ dm10_复数类_分离编译/main.cpp dm10_复数类_分离编译/complex.hpp)
 

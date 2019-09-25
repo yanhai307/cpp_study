@@ -83,6 +83,10 @@ public:
         // 为什么不能使用a?
 //        cout << "a: " << a << ", c: " << c << endl;
         cout << "c: " << c << endl;
+
+        // 要想用a，可以用下面2中方式
+        cout << "a: " << this->a << endl;
+        cout << "a: " << A<T>::a << endl;
     }
 
 private:
@@ -91,7 +95,7 @@ private:
 
 void test2()
 {
-    C<int> c1(1,2);
+    C<int> c1(1, 2);
 
     c1.print();
     c1.printC();
