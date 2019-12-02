@@ -8,4 +8,4 @@ add_executable(04_template_dm07_ dm07_继承中的类模板语法.cpp)
 add_executable(04_template_dm08_ dm08_复数类_成员函数在类内部.cpp)
 add_executable(04_template_dm09_ dm09_复数类_成员函数在同一个文件的类的外部.cpp)
 add_executable(04_template_dm10_ dm10_复数类_分离编译/main.cpp dm10_复数类_分离编译/complex.hpp)
-
+add_executable(04_template_dm11_ dm11_类模板中的static关键字.cpp)

@@ -10,7 +10,7 @@
 
 int main(int, char *[])
 {
-    bool enable_debug = true;
+    constexpr bool enable_debug = true;
     try {
         // This other example use a single logger with multiple sinks.
         // This means that the same log_msg is forwarded to multiple sinks;

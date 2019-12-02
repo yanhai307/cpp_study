@@ -76,6 +76,23 @@ C++对C语言的加强
 - dm16_证明vptr指针的存在
 - dm17_vptr指针的分步初始化
 
+## 04-template
+
+函数模板与类模板
+
+- dm01_函数模板语法基础
+- dm02_函数模板做函数参数强化
+- dm03_函数模板遇上函数重载
+- dm04_函数模板和普通函数在一起的调用规则
+- dm05_编译器实现模板机制剖析
+- dm06_类模板基础及单个类模板语法
+- dm07_继承中的类模板语法
+- dm08_复数类_成员函数在类内部
+- dm09_复数类_成员函数在同一个文件的类的外部
+- dm10_复数类_分离编译
+- dm11_类模板中的static关键字
+
+
 ## 07-spdlog
 
 日志库
@@ -84,8 +101,14 @@ C++对C语言的加强
 ### build
 ```bash
 wget https://github.com/gabime/spdlog/archive/v1.3.1.tar.gz -O spdlog-1.3.1.tar.gz
-tar -xf spdlog-1.3.1.tar.gz  
-cp -r -p spdlog-1.3.1/include/spdlog /usr/local/include/
+tar -xf spdlog-1.3.1.tar.gz
+cd spdlog-1.3.1
+mkdir build
+cd build
+cmake -DSPDLOG_BUILD_BENCH=OFF ..
+make -j4
+sudo make install
+
 ```
 
 ## 08-cmdline
