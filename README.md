@@ -50,7 +50,7 @@ C++对C语言的加强
 - dm22_operator_overloading_5 友元函数定义运算符重载<<
 - dm23_operator_overloading_6 运算符重载=
 - dm24_operator_overloading_7 运算符重载[] == !=
-- dm25_operator_overloading_8 运算符重载()
+- dm25_operator_overloading_8 运算符重载() bool !
 - dm26_operator_overloading_9 运算符重载&& ||
 - dm27_mystring 实现一个MyString类
 
@@ -88,15 +88,20 @@ tar -xf spdlog-1.3.1.tar.gz
 cp -r -p spdlog-1.3.1/include/spdlog /usr/local/include/
 ```
 
-
 ## 08-cmdline
 
 命令行解析库
 <https://github.com/tanakh/cmdline>
 
+## 09-jsoncpp
+
+<https://github.com/open-source-parsers/jsoncpp>
+
+
+<!--
 ## 深度探索
 
 ### 多继承中的内存模型
 
 ![多继承中的内存模型](doc/多继承内存模型.png)
-
+-->
