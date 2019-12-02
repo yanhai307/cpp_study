@@ -2,15 +2,10 @@
 // Created by yanhai on 2019/8/17.
 //
 
-// 未完待续...
-// 看到了第5张第7节
-
 #include <iostream>
-#include <cstring>
 #include "mystring.h"
 
 using namespace std;
-
 
 void test1()
 {
@@ -31,7 +26,6 @@ void test1()
     s2[1] = '4';
     cout << s2[1] << endl;
 }
-
 
 void test2()
 {
@@ -77,8 +71,8 @@ void test3()
 void test4()
 {
     MyString s1(100);
-    strcpy(s1.c_str(), "hello world!");
-    cout << s1 << endl;
+    s1 = "test4: hello world!";
+    cout << s1.c_str() << endl;
 
     MyString s2(20);
     s2 << "hello world!" << " hello c++!" << "hello.";
@@ -90,11 +84,43 @@ void test4()
     cout << s3 << endl;
 }
 
+void test5()
+{
+    MyString s1(10);
+
+    if (s1) {
+        cout << "s1 not empty." << endl;
+    } else {
+        cout << "s1 empty." << endl;
+    }
+
+    if (!s1) {
+        cout << "s1 empty." << endl;
+    } else {
+        cout << "s1 not empty." << endl;
+    }
+
+    MyString s2(10);
+    s2 << "hello world!";
+    if (s2) {
+        cout << "s2 not empty." << endl;
+    } else {
+        cout << "s2 empty." << endl;
+    }
+
+    if (!s2) {
+        cout << "s2 empty." << endl;
+    } else {
+        cout << "s2 not empty." << endl;
+    }
+}
+
 int main()
 {
     test1();
     test2();
     test3();
     test4();
+    test5();
     return 0;
 }

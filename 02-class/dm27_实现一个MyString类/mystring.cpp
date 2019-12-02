@@ -57,7 +57,6 @@ MyString::~MyString()
     m_size = 0;
 }
 
-
 MyString &MyString::operator=(const char *s)
 {
     delete[]m_p;
@@ -72,7 +71,6 @@ MyString &MyString::operator=(const char *s)
     m_p[m_size] = 0;
     return *this;
 }
-
 
 MyString &MyString::operator=(const MyString &s)
 {
@@ -103,16 +101,11 @@ const char &MyString::operator[](int index) const
     return m_p[index];
 }
 
-
 bool MyString::operator==(const MyString &s) const
 {
     if (m_len != s.m_len)
         return false;
 
-//    for (int i = 0; i < m_len; ++i) {
-//        if (m_p[i] != s[i])
-//            return false;
-//    }
     return !strcmp(m_p, s.m_p);
 }
 
@@ -129,6 +122,16 @@ bool MyString::operator>(const MyString &s) const
 bool MyString::operator<(const MyString &s) const
 {
     return strcmp(m_p, s.m_p) < 0;
+}
+
+MyString::operator bool() const
+{
+    return !!*this;
+}
+
+bool MyString::operator!() const
+{
+    return m_len == 0;
 }
 
 MyString &MyString::operator<<(const char *p)

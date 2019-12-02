@@ -2,8 +2,7 @@
 // Created by yanhai on 2019/8/17.
 //
 
-#ifndef CPP_STUDY_MYSTRING_H
-#define CPP_STUDY_MYSTRING_H
+#pragma once
 
 #include <iostream>
 
@@ -41,22 +40,17 @@ public:
 
     MyString &operator<<(const char *p);
 
-    char *c_str()
-    {
-        return m_p;
-    }
+    explicit operator bool() const;
+
+    bool operator!() const;
 
     const char *c_str() const
     {
         return m_p;
     }
 
-
 private:
     int m_len;
     char *m_p;
     int m_size;
 };
-
-
-#endif //CPP_STUDY_MYSTRING_H
