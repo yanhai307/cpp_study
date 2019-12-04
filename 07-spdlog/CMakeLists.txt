@@ -1,6 +1,6 @@
 include(FindPkgConfig)
 pkg_check_modules(SPDLOG spdlog)
-if (${SPDLOG_FOUND})
+if (SPDLOG_FOUND)
     include_directories(${SPDLOG_INCLUDE_DIRS})
     add_executable(07_spdlog_dm01_test1 dm01_test1.cpp)
     target_link_libraries(07_spdlog_dm01_test1 pthread)

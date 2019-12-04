@@ -92,6 +92,25 @@ C++对C语言的加强
 - dm10_复数类_分离编译
 - dm11_类模板中的static关键字
 
+## 06-boost
+
+Boost官网<https://www.boost.org>
+
+### build
+
+```bash
+wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz -O boost_1_69_0.tar.gz
+tar -xvf boost_1_69_0.tar.gz
+cd boost_1_69_0
+./bootstrap.sh
+./b2 --with-date_time install
+```
+
+### cmake
+
+```bash
+cmake --help-module FindBoost
+```
 
 ## 07-spdlog
 
@@ -108,7 +127,6 @@ cd build
 cmake -DSPDLOG_BUILD_BENCH=OFF ..
 make -j4
 sudo make install
-
 ```
 
 ## 08-cmdline
@@ -120,6 +138,22 @@ sudo make install
 
 <https://github.com/open-source-parsers/jsoncpp>
 
+```bash
+apt install libjsoncpp-dev
+```
+
+### build
+
+```bash
+wget https://github.com/open-source-parsers/jsoncpp/archive/1.9.2.tar.gz -O jsoncpp-1.9.2.tar.gz
+tar -xvf jsoncpp-1.9.2.tar.gz
+cd jsoncpp-1.9.2
+mkdir build
+cd build
+cmake -DBUILD_SHARED_LIBS=ON ..
+make -j8
+make install
+```
 
 <!--
 ## 深度探索
@@ -128,3 +162,29 @@ sudo make install
 
 ![多继承中的内存模型](doc/多继承内存模型.png)
 -->
+
+## update cmake
+
+```bash
+wget https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5.tar.gz
+tar -xvf cmake-3.15.5.tar.gz
+cd cmake-3.15.5
+```
+
+### cmake build
+
+```bash
+mkdir build
+cd build
+cmake ..
+make -j8
+make install
+```
+
+### not installed cmake
+
+```bash
+./bootstrap
+make -j8
+make install
+```
