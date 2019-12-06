@@ -10,14 +10,15 @@ using namespace std;
 static void write1()
 {
     Json::Value root;
-    Json::FastWriter writer;
+    Json::StreamWriterBuilder builder;
+    builder["indentation"] = Json::nullValue;    // default a tab
 
     root["name"] = "ming";
     root["age"] = 19;
     root["score"] = 90.5;
     root["pass"] = true;
 
-    auto dumps = writer.write(root);
+    auto dumps = Json::writeString(builder, root);
     cout << dumps << endl;
 }
 
@@ -25,7 +26,7 @@ static void write2()
 {
     Json::Value root;
     Json::Value students;
-    Json::StyledWriter writer;
+    Json::StreamWriterBuilder builder;
 
     root["school"] = "school1";
     for (int i = 0; i < 2; ++i) {
@@ -38,7 +39,7 @@ static void write2()
     }
     root["student"] = students;
 
-    auto dumps = writer.write(root);
+    auto dumps = Json::writeString(builder, root);
     cout << dumps << endl;
 }
 

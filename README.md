@@ -145,9 +145,9 @@ apt install libjsoncpp-dev
 ### build
 
 ```bash
-wget https://github.com/open-source-parsers/jsoncpp/archive/1.9.2.tar.gz -O jsoncpp-1.9.2.tar.gz
-tar -xvf jsoncpp-1.9.2.tar.gz
-cd jsoncpp-1.9.2
+wget https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz -O jsoncpp-1.8.4.tar.gz
+tar -xvf jsoncpp-1.8.4.tar.gz
+cd jsoncpp-1.8.4
 mkdir build
 cd build
 cmake -DBUILD_SHARED_LIBS=ON ..

@@ -16,7 +16,6 @@ endif ()
 
 find_package(Boost 1.69.0 COMPONENTS date_time)
 if (Boost_FOUND)
-    link_directories()
     add_executable(dm08_date_time1 dm08_日期时间库date_time1.cpp)
     target_link_libraries(dm08_date_time1 ${Boost_LIBRARIES})
     add_executable(dm09_date_time2 dm09_日期时间库date_time2.cpp)

@@ -4,6 +4,7 @@
 
 #include "json/json.h"
 #include <iostream>
+
 /** \brief Write a Value object to a string.
  * Example Usage:
  * $g++ stringWrite.cpp -ljsoncpp -std=c++11 -o stringWrite
@@ -16,7 +17,8 @@
  *     }
  * }
  */
-int main() {
+int main()
+{
     Json::Value root;
     Json::Value data;
     constexpr bool shouldUseOldWay = false;

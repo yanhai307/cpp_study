@@ -1,5 +1,5 @@
 include(FindPkgConfig)
-pkg_check_modules(JSONCPP jsoncpp)
+pkg_check_modules(JSONCPP jsoncpp>=1.4.0)
 if (JSONCPP_FOUND)
     include_directories(${JSONCPP_INCLUDE_DIRS})
     link_directories(${JSONCPP_LIBRARY_DIRS})
