@@ -98,17 +98,22 @@ Boost官网<https://www.boost.org>
 
 ### build
 
-```bash
+```shell script
 wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz -O boost_1_69_0.tar.gz
 tar -xvf boost_1_69_0.tar.gz
 cd boost_1_69_0
 ./bootstrap.sh
-./b2 --with-date_time install
+./b2 --with-date_time --with-timer install
+```
+
+####  Display the list of Boost libraries
+```shell script
+./b2  --show-libraries
 ```
 
 ### cmake
 
-```bash
+```shell script
 cmake --help-module FindBoost
 ```
 
@@ -118,7 +123,7 @@ cmake --help-module FindBoost
 <https://github.com/gabime/spdlog>
 
 ### build
-```bash
+```shell script
 wget https://github.com/gabime/spdlog/archive/v1.3.1.tar.gz -O spdlog-1.3.1.tar.gz
 tar -xf spdlog-1.3.1.tar.gz
 cd spdlog-1.3.1
@@ -138,13 +143,13 @@ sudo make install
 
 <https://github.com/open-source-parsers/jsoncpp>
 
-```bash
+```shell script
 apt install libjsoncpp-dev
 ```
 
 ### build
 
-```bash
+```shell script
 wget https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz -O jsoncpp-1.8.4.tar.gz
 tar -xvf jsoncpp-1.8.4.tar.gz
 cd jsoncpp-1.8.4
@@ -165,7 +170,7 @@ make install
 
 ## update cmake
 
-```bash
+```shell script
 wget https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5.tar.gz
 tar -xvf cmake-3.15.5.tar.gz
 cd cmake-3.15.5
@@ -173,7 +178,7 @@ cd cmake-3.15.5
 
 ### cmake build
 
-```bash
+```shell script
 mkdir build
 cd build
 cmake ..
@@ -183,7 +188,7 @@ make install
 
 ### not installed cmake
 
-```bash
+```shell script
 ./bootstrap
 make -j8
 make install
