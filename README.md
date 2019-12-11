@@ -160,6 +160,58 @@ make -j8
 make install
 ```
 
+## 10-mongodb
+
+mongodb 4.0: mongocxx >= 3.4: mongoc >= 1.13.0
+
+### c driver
+<https://docs.mongodb.com/ecosystem/drivers/c>
+
+#### install mongoc
+<http://mongoc.org/libmongoc/current/installing.html>
+
+Prerequisites for libmongoc
+
+On Debian / Ubuntu:
+
+    sudo apt-get install cmake libssl-dev libsasl2-dev
+
+On RedHat / Fedora:
+
+    sudo yum install cmake openssl-devel cyrus-sasl-devel
+
+```shell script
+wget https://github.com/mongodb/mongo-c-driver/releases/download/1.15.2/mongo-c-driver-1.15.2.tar.gz
+tar -xvf mongo-c-driver-1.15.2.tar.gz
+cd mongo-c-driver-1.15.2
+mkdir cmake-build
+cd cmake-build
+cmake -DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF -DCMAKE_BUILD_TYPE=Release ..
+make -j8
+make install
+ldconfig
+pkg-config --cflags --libs libmongoc-1.0
+pkg-config --cflags --libs libbson-1.0
+```
+
+### c++ driver
+<https://docs.mongodb.com/ecosystem/drivers/cxx>
+
+### install mongocxx
+<http://mongocxx.org/mongocxx-v3/installation>
+
+```shell script
+wget https://github.com/mongodb/mongo-cxx-driver/archive/r3.4.0.tar.gz -O mongo-cxx-driver-r3.4.0.tar.gz
+tar -xvf mongo-cxx-driver-r3.4.0.tar.gz
+cd mongo-cxx-driver-r3.4.0
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+make -j8
+make install
+ldconfig
+pkg-config --cflags --libs libmongocxx
+```
+
 <!--
 ## 深度探索
 

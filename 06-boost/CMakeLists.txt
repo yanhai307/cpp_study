@@ -1,6 +1,6 @@
-set(Boost_USE_STATIC_LIBS ON) # only find static libs
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
+set(Boost_USE_STATIC_LIBS ON) # only find static libs, default None
+set(Boost_USE_MULTITHREADED ON) # default TRUE
+set(Boost_USE_STATIC_RUNTIME OFF) # default None
 
 find_package(Boost 1.69.0)
 if (Boost_FOUND)
