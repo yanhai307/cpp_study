@@ -24,6 +24,11 @@ struct Teacher {
 }
 }
 
+// 如果之前定义了此命名空间，这里就是打开这个命名空间，向该命名空间添加其他实体
+namespace namespaceA { 
+    char b = 'a';
+}
+
 // 使用命名空间
 int main()
 {
@@ -32,6 +37,7 @@ int main()
     {
         using namespace namespaceA;
         cout << a << endl;
+        cout << b << endl;
     }
 
     {
@@ -97,3 +103,4 @@ int main()
 //  3. C++命名空间的定义: namespace name { ... }
 //  4. 使用命名空间 using namespace name;
 //  5. namespace定义可以嵌套。
+//  6. 命名空间可以不连续，即同一个命名空间可以写在不同的地方。
