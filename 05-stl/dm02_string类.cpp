@@ -259,7 +259,7 @@ void test6()
     string s1 = "abcdefg";
     // at方法
     try {
-        for (int i = 0; i < s1.length() + 2; ++i) {
+        for (string::size_type i = 0; i < s1.length() + 2; ++i) {
             cout << s1.at(i) << "-";
         }
         cout << endl;
@@ -269,7 +269,7 @@ void test6()
 
     // operator[]
     try {
-        for (int i = 0; i < s1.length() + 2; ++i) {
+        for (string::size_type i = 0; i < s1.length() + 2; ++i) {
             cout << s1[i] << "-";   // 直接对内存的访问，可能会引起程序崩溃
         }
         cout << endl;

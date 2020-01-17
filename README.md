@@ -134,6 +134,16 @@ make -j4
 sudo make install
 ```
 
+### cmake
+
+借助pkg-config
+```cmake
+include(FindPkgConfig)
+pkg_check_modules(SPDLOG REQUIRED spdlog>=1.3.1)
+include_directories(${SPDLOG_INCLUDE_DIRS})
+link_libraries(${SPDLOG_LIBRARIES})
+```
+
 ## 08-cmdline
 
 命令行解析库
@@ -158,6 +168,35 @@ cd build
 cmake -DBUILD_SHARED_LIBS=ON ..
 make -j8
 make install
+```
+
+### cmake
+借助pkg-config
+```cmake
+pkg_check_modules(JSONCPP REQUIRED jsoncpp>=1.4.0)
+include_directories(${JSONCPP_INCLUDE_DIRS})
+link_libraries(${JSONCPP_LIBRARIES})
+```
+静态库名字为jsoncpp_static.a，但是没有对应的pkg-config的配置，我们手动添加一个
+    
+    cp /usr/local/lib/pkgconfig/jsoncpp.pc /usr/local/lib/pkgconfig/jsoncpp-static.pc
+
+然后修改`/usr/local/lib/pkgconfig/jsoncpp-static.pc`该文件  
+将Name改为`Name: jsoncpp-static`, 将Libs改为`Libs: -L${libdir} -ljsoncpp_static`
+
+运行`pkg-config`查看一下
+
+```bash
+$ pkg-config --list-all  | grep jsoncpp
+jsoncpp              jsoncpp - A C++ library for interacting with JSON
+jsoncpp-static       jsoncpp-static - A C++ library for interacting with JSON
+```
+
+然后在cmake里面就可以这样使用jsoncpp静态库了
+```cmake
+pkg_check_modules(JSONCPP_STATIC REQUIRED jsoncpp-static>=1.4.0)
+include_directories(${JSONCPP_STATIC_INCLUDE_DIRS})
+link_libraries(${JSONCPP_STATIC_LIBRARIES})
 ```
 
 ## 10-mongodb
@@ -197,7 +236,7 @@ pkg-config --cflags --libs libbson-1.0
 ### c++ driver
 <https://docs.mongodb.com/ecosystem/drivers/cxx>
 
-### install mongocxx
+#### install mongocxx
 <http://mongocxx.org/mongocxx-v3/installation>
 
 ```shell script
@@ -210,6 +249,77 @@ make -j8
 make install
 ldconfig
 pkg-config --cflags --libs libmongocxx
+```
+
+编译动态库选项  
+cmake -DBUILD_SHARED_LIBS=ON ..
+
+编译静态库选项  
+cmake -DBUILD_SHARED_LIBS=OFF ..
+
+#### cmake 
+
+使用动态库
+```cmake
+# mongocxx shared library
+find_package(libmongocxx 3.4.0 REQUIRED)
+include_directories(${LIBMONGOCXX_INCLUDE_DIRS})
+link_libraries(${LIBMONGOCXX_LIBRARIES})
+```
+使用静态库
+```cmake
+# mongocxx static library
+find_package(libmongocxx-static 3.4.0 REQUIRED)
+include_directories(${LIBMONGOCXX_STATIC_INCLUDE_DIRS})
+link_libraries(${LIBMONGOCXX_STATIC_LIBRARIES})
+foreach (LIBMONGOCXX_STATIC_DEFINITION ${LIBMONGOCXX_STATIC_DEFINITIONS})
+    add_definitions(-D${LIBMONGOCXX_STATIC_DEFINITION})
+endforeach (LIBMONGOCXX_STATIC_DEFINITION)
+```
+
+## 11-acl
+
+acl-dev库<https://github.com/acl-dev/acl>
+
+### build
+
+<https://github.com/acl-dev/acl/blob/master/BUILD.md>
+
+```bash
+wget https://github.com/acl-dev/acl/archive/v3.5.0.tar.gz -O acl-3.5.0.tar.gz
+tar -xvf acl-3.5.0.tar.gz
+cd acl-3.5.0
+make build_one
+
+# library file
+cp libacl_all.* /usr/local/lib
+
+# head file
+mkdir -p /usr/local/include/acl
+cp -r -p lib_acl/include/* /usr/local/include/acl/
+cp -r -p lib_protocol/include/* /usr/local/include/acl/
+cp -r -p lib_acl_cpp/include/acl_cpp /usr/local/include/acl/
+```
+
+编写 libacl_all.pc 文件，并将其放到`/usr/local/lib/pkgconfig/`目录下
+```text
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${exec_prefix}/include
+
+Name: libacl_all
+Description: acl library content acl protocol acl_cpp.
+Version: 3.5.0
+URL: https://github.com/acl-dev/acl
+Requires: 
+Libs: -L${libdir} -lacl_all
+Cflags: -I${includedir}/acl
+```
+
+```bash
+pkg-config --cflags --libs libacl_all
+pkg-config --modversion libacl_all
 ```
 
 <!--
