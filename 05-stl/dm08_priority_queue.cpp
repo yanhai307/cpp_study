@@ -9,6 +9,7 @@
  */
 
 #include <iostream>
+#include <cassert>
 #include <queue>
 
 using namespace std;

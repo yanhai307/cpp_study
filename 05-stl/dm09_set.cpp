@@ -13,6 +13,7 @@
  */
 
 #include <iostream>
+#include <cassert>
 #include <set>
 
 using namespace std;
